@@ -33,7 +33,7 @@ export default function ProfileScreen() {
 
             // 1. ดึงจำนวนรีวิวทั้งหมดจาก Backend
             try {
-              const res = await fetch(`http://192.168.174.35:3000/user-reviews/${parsedUser.id}`);
+              const res = await fetch(`http://192.168.174.35:3000/user-reviews/${parsedUser.id}`); //แก้ ip 
               const data = await res.json();
               if (data.status === 'success') {
                 setTotalReviews(data.totalCount);

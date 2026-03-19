@@ -26,7 +26,8 @@ export default function SavedScreen() {
 
           // ถ้าล็อกอินอยู่ ให้ดึงข้อมูลของคนนั้นจาก Backend
           const user = JSON.parse(storedUser);
-          const response = await fetch(`http://192.168.174.35:3000/saved-events/${user.id}`);
+          const response = await fetch(`http://192.168.174.35:3000/saved-events/${user.id}`); //แก้ ip 
+
           const data = await response.json();
 
           if (data.status === 'success') {

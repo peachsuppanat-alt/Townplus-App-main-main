@@ -18,7 +18,7 @@ export default function MyReviewsScreen() {
         if (!storedUser) return;
         
         const user = JSON.parse(storedUser);
-        const res = await fetch(`http://192.168.174.35:3000/user-reviews/${user.id}`);
+        const res = await fetch(`http://192.168.174.35:3000/user-reviews/${user.id}`); //แก้ ip 
         const data = await res.json();
         
         if (data.status === 'success') {

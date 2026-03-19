@@ -40,7 +40,7 @@ export default function HomeScreen() {
       // 1. แอบดึงคะแนนดาวเฉลี่ยจาก Backend เพื่อให้การ์ดอัปเดตล่าสุดเสมอ
       let ratingsMap: any = {};
       try {
-        const res = await fetch('http://192.168.174.35:3000/all-ratings');
+        const res = await fetch('http://192.168.174.35:3000/all-ratings'); //แก้ ip
         const data = await res.json();
         if (data.status === 'success') {
           data.data.forEach((r: any) => {
@@ -171,7 +171,7 @@ export default function HomeScreen() {
           <View style={styles.heroIconBg}><Ionicons name="compass" size={28} color="#FF385C" /></View>
           <View style={styles.heroTextContainer}>
             <Text style={styles.heroButtonTitle}>กิจกรรมใกล้ฉัน</Text>
-            <Text style={styles.heroButtonSub}>ค้นหางานรอบตัวในรัศมี 5 กม.</Text>
+            <Text style={styles.heroButtonSub}>ค้นหางานรอบตัวในรัศมี 30 กม.</Text>
           </View>
           <View style={styles.arrowCircle}><Ionicons name="arrow-forward" size={20} color="#FF385C" /></View>
         </TouchableOpacity>
